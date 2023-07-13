@@ -25,8 +25,8 @@ How to setup this project on your device ?
    to match the credentials of the database you just created.
 10) Migrate the database :
     "$ php artisan migrate"
-11) Seed the database for admin email and password : (email : sadmin@gmail.com | password : 123456789) by default
-    php artisan db:seed
+11) Seed the database for admin email and password  (email : sadmin@gmail.com | password : 123456789) by default :
+    "$ php artisan db:seed"
 =======
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
