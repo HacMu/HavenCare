@@ -1,6 +1,32 @@
-<<<<<<< HEAD
 # Havencare
 Havencare is a hospital management system developed with Laravel 9
+====================
+How to setup this project on your device ?
+1) Clone GitHub repo for this project locally :
+   "$ git clone https://github.com/HacMu/Havencare.git"
+2) cd into your project :
+   "$ cd Havencare"
+3) Install Composer Dependencies :
+   "$ composer install" or "$ composer update"
+   **Note, some errors may occur while downloading the composor, such as the following error :
+   "Your requirements could not be resolved to an installable set of packages."
+   You can solve this problem by running the following command : "$ composer update --ignore-platform-reqs"**
+4) Install NPM Dependencies :
+   "$ npm install" or if you prefer yarn "$ yarn"
+5) Build NPM Dependencies :
+   "$ npm run build"
+6) Create a copy of your .env file :
+   "$ cp .env.example .env" -> This will create a copy of the .env.example file in your project and name the copy simply .env.
+7) Generate an app encryption key :
+   "$ php artisan key:generate"
+8) Create an empty database for our application
+9) In the .env file, add database information to allow Laravel to connect to the database :
+   In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options
+   to match the credentials of the database you just created.
+10) Migrate the database :
+    "$ php artisan migrate"
+11) Seed the database for admin email and password : (email : sadmin@gmail.com | password : 123456789) by default
+    php artisan db:seed
 =======
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
