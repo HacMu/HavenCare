@@ -1,0 +1,354 @@
+// Included Fonts
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('/Fonts/Gilroy-Regular.woff');
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url('/Fonts/Gilroy-Medium.woff');
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url('/Fonts/Gilroy-Bold.woff');
+}
+
+@font-face {
+    font-family: Gilroy-Light;
+    src: url('/Fonts/Gilroy-Light.woff');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+// Main Variables
+
+$mainColor : #00A099;
+$SecondColor : #4169E1;
+$colorBlack : rgba(33, 37, 41, 1);
+$colorWhite : rgba(248, 249, 250, 1);
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+
+    // NavigationBar Section Start Here
+
+    &__nav {
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    &__logo {
+        padding-left: 75px;
+        margin-top: 13px;
+
+        img {
+            width: 221px;
+            height: 86px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .Slash {
+            width: 1px;
+            height: 40px;
+            background-color: $colorBlack;
+            margin-right: 30px;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    &__li {
+        list-style: none;
+    }
+
+    &__links {
+        font-family: 'Gilroy-Medium';
+        text-decoration: none;
+        color: $colorBlack;
+        padding: 12px 24px;
+        margin-right: 20px;
+        transition: .5s all;
+        font-size: 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 30%;
+            height: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $mainColor;
+            transition: .3s all;
+        }
+
+        &:hover::after {
+            width: 90%;
+            height: 2px;
+        }
+    }
+
+    &__login {
+        padding-right: 157px;
+        font-family: 'Gilroy-Medium';
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+            color: $colorWhite;
+            background-color: $mainColor;
+            padding: 12px 24px;
+            border-radius: 12px;
+        }
+
+    }
+
+
+    //Forms Start Here
+
+    &__FormBox {
+
+        width: 100%;
+        height: calc(100% - 12vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        &__side {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 968px;
+                height: 645px;
+            }
+        }
+
+        &__loginForm {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .email__form {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 16px;
+
+                label {
+                    font-family: 'Gilroy-Medium';
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                    margin-left: 5px;
+                }
+
+                input[type="email"] {
+                    width: 400px;
+                    height: 45px;
+                    border-radius: 16px;
+                    font-size: 18px;
+                    background-color: #eee;
+                    border: none;
+                    outline: none;
+                    padding: 20px;
+                    caret-color: $mainColor;
+                    font-family: 'Gilroy-Regular';
+
+                    &::placeholder {
+                        font-family: 'Gilroy-Regular';
+                        color: #212529;
+                        opacity: .5;
+                    }
+                    
+                    &:focus {
+                        border: 1px solid $mainColor;
+                    }
+                }
+            }
+
+            .password__form {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                label {
+                    font-family: 'Gilroy-Medium';
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                    margin-left: 5px;
+                }
+
+                #password-3 {
+                    width: 400px;
+                    height: 45px;
+                    border-radius: 16px;
+                    background-color: #eee;
+                    font-size: 18px;
+                    padding: 20px;
+                    border: none;
+                    outline: none;
+                    caret-color: $mainColor;
+                    font-family: 'Gilroy-med';
+
+                    &::placeholder {
+                        font-family: 'Gilroy-Regular';
+                        color: #212529;
+                        opacity: .5;
+                    }
+                    
+                    &:focus {
+                        border: 1px solid $mainColor;
+                    }
+                }
+
+                span {
+                    &::after {
+                        content: '\f06e';
+                        font-family: fontAwesome;
+                        position: absolute;
+                        top: 46px;
+                        right: 5px;
+                        cursor: pointer;
+                        padding: 0 15px;
+                    }
+
+                    &.hide::after {
+                        content: '\f070';
+                        font-family: fontAwesome;
+                        position: absolute;
+                        top: 46px;
+                        right: 5px;
+                        cursor: pointer;
+                        padding: 0 15px;
+                    }
+                }
+            }
+
+            .check__forgetPass {
+                margin-right: 0px;
+                margin-top: 15px;
+
+                input[type="checkbox"]:checked {
+                    accent-color: $mainColor;
+                }
+
+                label {
+                    font-size: 15px;
+                    font-family: 'Gilroy-Regular';
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $mainColor;
+                    font-size: 15px;
+                    margin-left: 155px;
+                    font-family: 'gilroy-Regular';
+                }
+            }
+
+            .login__btn {
+                margin-top: 32px;
+
+                a {
+                    padding: 17px 170px;
+                    color: $colorWhite;
+                    text-decoration: none;
+                    background-color: transparent;
+                    border-radius: 45px;
+                    border: 1px solid $mainColor;
+                    font-size: 20px;
+                    color: $mainColor;
+                    font-family: 'Gilroy-Bold';
+                    transition: .5s all;
+                    &:hover{
+                        background-color: $mainColor;
+                        color: $colorWhite;
+                    }
+                }
+
+            }
+
+            .signUp__text{
+                font-family: 'Gilroy-Light';
+                margin-top: 32px;
+                position: relative;
+                padding: 5px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 80px;
+                    height: 1px;
+                    left: -85px;
+                    top: 50%;
+                    background-color: $colorBlack;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 80px;
+                    height: 1px;
+                    right: -85px;
+                    top: 50%;
+                    background-color: $colorBlack;
+                }
+            }
+
+            .signUp__btn{
+                margin-top: 30px;
+
+                a {
+                    padding: 17px 170px;
+                    color: $colorWhite;
+                    text-decoration: none;
+                    background-color: $SecondColor;
+                    border-radius: 45px;
+                    font-size: 20px;
+                    font-family: 'Gilroy-Bold';
+                }
+
+            }
+
+        }
+    }
+
+
+
+
+}

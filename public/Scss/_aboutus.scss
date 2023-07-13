@@ -1,0 +1,224 @@
+.aboutUs {
+    width: 100%;
+    height: 100vh;
+    background-color: $colorWhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__title {
+        width: 50%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+        margin-right: 80px;
+
+        .ab_h1 {
+            font-size: 50px;
+            font-family: 'Gilroy-Bold';
+            background-image: linear-gradient(-270deg, #00A099, #4169E1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-right: 190px;
+        }
+
+        .ab_p {
+            font-size: 22px;
+            font-family: 'Gilroy-Light';
+            color: $colorBlack;
+            width: 600px;
+            text-align: start;
+            margin-bottom: 30px;
+        }
+
+        &__text {
+
+            .Hours_Service {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                margin-bottom: 15px;
+
+                .text {
+                    margin-left: 10px;
+                    padding-top: 20px;
+
+                    h1 {
+                        font-size: 30px;
+                        font-family: 'Gilroy-Bold';
+                        color: $colorBlack;
+                        width: 600px;
+                        text-align: start;
+                        margin-bottom: 5px;
+                    }
+
+                    P {
+                        font-size: 22px;
+                        font-family: 'Gilroy-Light';
+                        color: $colorBlack;
+                        width: 600px;
+                        text-align: start;
+                    }
+                }
+
+                .img_box {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 50px;
+                    margin-top: 25px;
+
+                    img {
+
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+
+            .Need_Emergency {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                margin-bottom: 10px;
+
+                .text {
+                    margin-left: 10px;
+                    padding-top: 20px;
+
+                    h1 {
+                        font-size: 30px;
+                        font-family: 'Gilroy-Bold';
+                        color: $colorBlack;
+                        width: 600px;
+                        text-align: start;
+                        margin-bottom: 5px;
+                    }
+
+                    P {
+                        font-size: 22px;
+                        font-family: 'Gilroy-Light';
+                        color: $colorBlack;
+                        width: 600px;
+                        text-align: start;
+                    }
+                }
+
+                .img_box {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 50px;
+                    margin-top: 25px;
+
+                    img {
+
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+
+            .Qualified_Doctor {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                .text {
+                    margin-left: 10px;
+                    padding-top: 20px;
+
+                    h1 {
+                        font-size: 30px;
+                        font-family: 'Gilroy-Bold';
+                        color: $colorBlack;
+                        width: 600px;
+                        text-align: start;
+                        margin-bottom: 5px;
+                    }
+
+                    P {
+                        font-size: 22px;
+                        font-family: 'Gilroy-Light';
+                        color: $colorBlack;
+                        width: 600px;
+                        text-align: start;
+                    }
+                }
+
+                .img_box {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 50px;
+                    margin-top: 25px;
+
+                    img {
+
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+    &__img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+        margin-left: 70px;
+        position: relative;
+        transition: .5s all;
+
+        img {
+            margin-left: 160px;
+            width: 480px;
+            height: 500px;
+            z-index: 2;
+            border-radius: 45px;
+            zoom: 250px;
+        }
+
+        &::after {
+            margin-left: 160px;
+            position: absolute;
+            border-radius: 45px;
+            content: '';
+            width: 490px;
+            height: 510px;
+            border: 1px solid $mainColor;
+            transform: rotate(15deg);
+            z-index: 1;
+        }
+
+    }
+
+}

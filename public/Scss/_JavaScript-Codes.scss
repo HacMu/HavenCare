@@ -1,0 +1,13 @@
+@keyframes moveScroll{
+    0%{
+        transform: translateY(4px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.AnimatToRight{
+    animation: moveToRight 1s ease-out;
+}

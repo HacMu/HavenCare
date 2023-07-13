@@ -1,0 +1,526 @@
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/Fonts/Gilroy-Regular.woff");
+}
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url("/Fonts/Gilroy-Medium.woff");
+}
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url("/Fonts/Gilroy-Bold.woff");
+}
+@font-face {
+  font-family: Gilroy-Light;
+  src: url("/Fonts/Gilroy-Light.woff");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+.header__nav {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.header__logo {
+  padding-left: 75px;
+  margin-top: 13px;
+}
+.header__logo img {
+  width: 221px;
+  height: 86px;
+}
+.header__items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__items .Slash {
+  width: 1px;
+  height: 40px;
+  background-color: #212529;
+  margin-right: 30px;
+}
+.header__ul {
+  display: flex;
+  flex-direction: row;
+}
+.header__li {
+  list-style: none;
+}
+.header__links {
+  font-family: "Gilroy-Medium";
+  text-decoration: none;
+  color: #212529;
+  padding: 12px 24px;
+  margin-right: 20px;
+  transition: 0.5s all;
+  font-size: 20px;
+  position: relative;
+}
+.header__links::after {
+  content: "";
+  width: 30%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #00a099;
+  transition: 0.3s all;
+}
+.header__links:hover::after {
+  width: 90%;
+  height: 2px;
+}
+.header__login {
+  padding-right: 157px;
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+}
+.header__login a {
+  text-decoration: none;
+  color: #f8f9fa;
+  background-color: #00a099;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+.header__FormBox {
+  width: 100%;
+  height: calc(100% - 12vh);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__FormBox__side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header__FormBox__side img {
+  width: 968px;
+  height: 645px;
+}
+.header__FormBox__signupForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__FormBox__signupForm--normal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__FormBox__signupForm--normal .ID__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--normal .ID__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--normal .ID__form input[type="text"] {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  font-size: 18px;
+  background-color: #eee;
+  border: none;
+  outline: none;
+  padding: 20px;
+  caret-color: #00a099;
+  font-family: "Gilroy-Regular";
+}
+.header__FormBox__signupForm--normal .ID__form input[type="text"]::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--normal .ID__form input[type="text"]:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--normal .Fname__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--normal .Fname__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--normal .Fname__form #FullName {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  background-color: #eee;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  caret-color: #00a099;
+  font-family: "Gilroy-med";
+}
+.header__FormBox__signupForm--normal .Fname__form #FullName::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--normal .Fname__form #FullName:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--normal .PhoneNumber__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--normal .PhoneNumber__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--normal .PhoneNumber__form #PhoneNumber {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  background-color: #eee;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  caret-color: #00a099;
+  font-family: "Gilroy-med";
+}
+.header__FormBox__signupForm--normal
+  .PhoneNumber__form
+  #PhoneNumber::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--normal .PhoneNumber__form #PhoneNumber:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--normal .login__btn {
+  margin-top: 32px;
+}
+.header__FormBox__signupForm--normal .login__btn a {
+  padding: 17px 170px;
+  color: #f8f9fa;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 45px;
+  border: 1px solid #00a099;
+  font-size: 20px;
+  color: #00a099;
+  font-family: "Gilroy-Bold";
+  transition: 0.5s all;
+}
+.header__FormBox__signupForm--normal .login__btn a:hover {
+  background-color: #00a099;
+  color: #f8f9fa;
+}
+.header__FormBox__signupForm--normal .signUp__text {
+  font-family: "Gilroy-Light";
+  margin-top: 32px;
+  position: relative;
+  padding: 5px;
+}
+.header__FormBox__signupForm--normal .signUp__text::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  left: -85px;
+  top: 50%;
+  background-color: #212529;
+}
+.header__FormBox__signupForm--normal .signUp__text::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  right: -85px;
+  top: 50%;
+  background-color: #212529;
+}
+.header__FormBox__signupForm--normal .signUp__btn {
+  margin-top: 30px;
+}
+.header__FormBox__signupForm--normal .signUp__btn a {
+  padding: 17px 170px;
+  color: #f8f9fa;
+  text-decoration: none;
+  background-color: #4169e1;
+  border-radius: 45px;
+  font-size: 20px;
+  font-family: "Gilroy-Bold";
+}
+.header__FormBox__signupForm--normal .copyright {
+  position: absolute;
+  top: 95%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.header__FormBox__signupForm--normal .copyright p {
+  font-size: 16px;
+  font-family: "Gilroy-Light";
+  text-align: center;
+}
+.header__FormBox__signupForm--cont {
+  display: none;
+}
+.header__FormBox__signupForm--cont .email__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--cont .email__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--cont .email__form #email {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  background-color: #eee;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  caret-color: #00a099;
+  font-family: "Gilroy-med";
+}
+.header__FormBox__signupForm--cont .email__form #email::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--cont .email__form #email:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--cont .password__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--cont .password__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--cont .password__form #password {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  background-color: #eee;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  caret-color: #00a099;
+  font-family: "Gilroy-med";
+}
+.header__FormBox__signupForm--cont .password__form #password::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--cont .password__form #password:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--cont .password__form #toggle_btn-1::after {
+  content: "\f06e";
+  font-family: fontAwesome;
+  position: absolute;
+  top: 46px;
+  right: 5px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.header__FormBox__signupForm--cont .password__form #toggle_btn-1.hide::after {
+  content: "\f070";
+  font-family: fontAwesome;
+  position: absolute;
+  top: 46px;
+  right: 5px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.header__FormBox__signupForm--cont .Reppassword__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--cont .Reppassword__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--cont .Reppassword__form #Reppassword {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  background-color: #eee;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  caret-color: #00a099;
+  font-family: "Gilroy-med";
+}
+.header__FormBox__signupForm--cont
+  .Reppassword__form
+  #Reppassword::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--cont .Reppassword__form #Reppassword:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--cont .Reppassword__form #toggle_btn-2::after {
+  content: "\f06e";
+  font-family: fontAwesome;
+  position: absolute;
+  top: 46px;
+  right: 5px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.header__FormBox__signupForm--cont
+  .Reppassword__form
+  #toggle_btn-2.hide::after {
+  content: "\f070";
+  font-family: fontAwesome;
+  position: absolute;
+  top: 46px;
+  right: 5px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.header__FormBox__signupForm--cont .BirthDate__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.header__FormBox__signupForm--cont .BirthDate__form label {
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.header__FormBox__signupForm--cont .BirthDate__form input[type="date"] {
+  width: 400px;
+  height: 45px;
+  border-radius: 16px;
+  font-size: 18px;
+  background-color: #eee;
+  border: none;
+  outline: none;
+  padding: 20px;
+  caret-color: #00a099;
+  font-family: "Gilroy-Regular";
+}
+.header__FormBox__signupForm--cont
+  .BirthDate__form
+  input[type="date"]::placeholder {
+  font-family: "Gilroy-Regular";
+  color: #212529;
+  opacity: 0.5;
+}
+.header__FormBox__signupForm--cont .BirthDate__form input[type="date"]:focus {
+  border: 1px solid #00a099;
+}
+.header__FormBox__signupForm--cont .check__forgetPass {
+  margin-right: 0px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.header__FormBox__signupForm--cont
+  .check__forgetPass
+  input[type="checkbox"]:checked {
+  accent-color: #00a099;
+}
+.header__FormBox__signupForm--cont .check__forgetPass label {
+  font-size: 15px;
+  font-family: "Gilroy-Regular";
+}
+.header__FormBox__signupForm--cont .check__forgetPass a {
+  text-decoration: none;
+  margin-left: 3px;
+  color: #4169e1;
+  font-size: 15px;
+  font-family: "gilroy-Regular";
+}
+.header__FormBox__signupForm--cont .signUp__btn {
+  margin-top: 30px;
+}
+.header__FormBox__signupForm--cont .signUp__btn a {
+  padding: 17px 170px;
+  color: #f8f9fa;
+  text-decoration: none;
+  background-color: #00a099;
+  border-radius: 45px;
+  border: 1px solid #00a099;
+  font-size: 20px;
+  font-family: "Gilroy-Bold";
+  transition: 0.5s all;
+}
+.header__FormBox__signupForm--cont .signUp__btn a:hover {
+  background-color: #00a099;
+  color: #f8f9fa;
+}
+.header__FormBox__signupForm--cont .copyright {
+  position: absolute;
+  top: 95%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.header__FormBox__signupForm--cont .copyright p {
+  font-size: 16px;
+  font-family: "Gilroy-Light";
+  text-align: center;
+}
+
+/*# sourceMappingURL=signup.css.map */

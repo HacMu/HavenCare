@@ -1,0 +1,210 @@
+.contact {
+    width: 100%;
+    height: 400px;
+    background-color: $colorBlack;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 16px;
+
+    &__logo__copyRight {
+        margin-right: 200px;
+
+        img {
+            width: 457px;
+            height: 176px;
+            padding-left: 48px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $colorWhite;
+            font-family: 'Gilroy-Light';
+            padding-left: 101px;
+
+        }
+
+    }
+
+    &__service {
+        margin-right: 200px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        h1 {
+            font-size: 22px;
+            font-family: 'Gilroy-Bold';
+            background-image: linear-gradient(-270deg, #00A099, #4169E1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hat {
+            margin-bottom: 8px;
+            width: 35px;
+            height: 1.8px;
+            background-color: $colorWhite;
+            color: $colorWhite;
+        }
+
+        .location_ser {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+
+            }
+
+            p {
+                color: $colorWhite;
+                font-family: 'Gilroy-Medium';
+
+            }
+        }
+
+        .phone_ser {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                color: $colorWhite;
+                font-family: 'Gilroy-Medium';
+            }
+        }
+
+        .mail_ser {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                color: $colorWhite;
+                font-family: 'Gilroy-Medium';
+            }
+        }
+    }
+
+    &__socialMedia {
+        margin-right: 48px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        h1 {
+            font-size: 22px;
+            font-family: 'Gilroy-Bold';
+            background-image: linear-gradient(-270deg, #00A099, #4169E1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hat {
+            margin-bottom: 8px;
+            width: 35px;
+            height: 1.8px;
+            background-color: $colorWhite;
+            color: $colorWhite;
+        }
+
+        .facebook_con {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                color: $colorWhite;
+                font-family: 'Gilroy-Medium';
+            }
+        }
+
+        .instagram_con {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                color: $colorWhite;
+                font-family: 'Gilroy-Medium';
+            }
+        }
+
+        .linkedin_con {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                color: $colorWhite;
+                font-family: 'Gilroy-Medium';
+            }
+        }
+    }
+}
